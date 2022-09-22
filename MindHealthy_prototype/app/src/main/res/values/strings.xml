@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">MindHealthy_prototype</string>
+    <string name="publicar">Publicar</string>
+    <string name="inserir_imagem">Inserir Imagem</string>
+    <string name="descartar">Descartar</string>
+    <string name="rick_john">Rick John</string>
+    <string name="vice_city">Vice City</string>
+    <string name="digite_sua_postagem">Digite sua Postagem</string>
+
+    <string-array name="temas">
+        <item>Home</item>
+        <item>Saúde Mental</item>
+        <item>Lives</item>
+        <item>Controle de ansiedade</item>
+        <item>Grupos de apoio</item>
+        <item>Consultas</item>
+    </string-array>
+</resources>
