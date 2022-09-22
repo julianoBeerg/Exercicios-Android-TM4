@@ -4,95 +4,125 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#6E6B6B"
+    android:background="@drawable/background_dice"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/textDado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="casual"
         android:textColor="@color/black"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.511"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.067"
-        tools:text="Dice 6" />
-
-    <Button
-        android:id="@+id/buttonD20"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="D20"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.51"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonD12" />
-
-    <Button
-        android:id="@+id/buttonD12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:text="D12"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.51"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonD6" />
-
-    <Button
-        android:id="@+id/buttonD6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="D6"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.51"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textDado" />
-
-    <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
+        android:textSize="48sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonD20">
-
-        <RadioButton
-            android:id="@+id/radioButtonD6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="onRadioButtonClicked"
-            android:text="D6" />
-
-        <RadioButton
-            android:id="@+id/radioButtonD12"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="onRadioButtonClicked"
-            android:text="D12" />
-
-        <RadioButton
-            android:id="@+id/radioButtonD20"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="onRadioButtonClicked"
-            android:text="D20" />
-    </RadioGroup>
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:text="Dice" />
 
     <Button
         android:id="@+id/buttonDados"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="Rolar Dados"
+        android:text="@string/rolar_dados"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonD12">
+
+        <RadioButton
+            android:id="@+id/radioButtonD6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="@string/d6"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/radioButtonD12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="@string/d12"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:ignore="TextContrastCheck,TextContrastCheck" />
+
+        <RadioButton
+            android:id="@+id/radioButtonD20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="@string/d20"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/buttonD20"
+        android:layout_width="82dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="28dp"
+        android:background="@drawable/dice_20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textDado" />
+
+    <Button
+        android:id="@+id/buttonD12"
+        android:layout_width="85dp"
+        android:layout_height="86dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="52dp"
+        android:background="@drawable/dice_12"
+        app:layout_constraintEnd_toStartOf="@+id/buttonD20"
+        app:layout_constraintTop_toBottomOf="@+id/textDado" />
+
+    <Button
+        android:id="@+id/buttonD6"
+        android:layout_width="105dp"
+        android:layout_height="86dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/dice_6"
+        app:layout_constraintEnd_toStartOf="@+id/buttonD12"
+        app:layout_constraintHorizontal_bias="0.373"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textDado" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="185dp"
+        android:layout_height="241dp"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/dices_logo" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-25dp"
+        android:text="Fantasy Gen"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
