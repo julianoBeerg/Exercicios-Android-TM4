@@ -10,8 +10,6 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.generation.todolistmobile.adapter.TarefaAdapter
 import com.generation.todolistmobile.databinding.FragmentListBinding
-import com.generation.todolistmobile.model.Tarefa
-
 
 class ListFragment : Fragment() {
 

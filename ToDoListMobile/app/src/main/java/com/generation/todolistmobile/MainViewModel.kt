@@ -9,7 +9,6 @@ import com.generation.todolistmobile.api.Repository
 import com.generation.todolistmobile.model.Categoria
 import com.generation.todolistmobile.model.Tarefa
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import retrofit2.Response
 import java.time.LocalDate
