@@ -39,7 +39,7 @@ class AddFragment : Fragment() {
         return !(nome == "" || sobrenome == "" || idade == "")
     }
 
-    
+
     fun inserirNoBanco(){
         val nome = binding.editNome.text.toString()
         val sobrenome = binding.editSobrenome.text.toString()
@@ -48,7 +48,7 @@ class AddFragment : Fragment() {
         if(verificarCampos(nome, sobrenome, idade)){
             val user = Usuario(0, nome, sobrenome, idade.toInt())
             mainViewModel.addUser(user)
-            Toast.makeText(context, "Usuário Adcionado!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, "Usuário Adicionado!", Toast.LENGTH_SHORT).show()
             findNavController().navigate(R.id.action_addFragment_to_listFragment)
         }else{
             Toast.makeText(context, "Preencha Todos os campos", Toast.LENGTH_SHORT).show()
